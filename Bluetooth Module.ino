@@ -1,6 +1,6 @@
-int pinOUT = 13; 
-int redLED = 7;
-int greenLED = 8;
+int pinOUT = 13; //load one
+int redLED = 7;  ///load two
+int greenLED = 8; //load three
 int state = 0;
 int flag = 0; 
  
