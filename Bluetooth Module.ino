@@ -1,6 +1,6 @@
-int pinOUT = 13; //load one
-int redLED = 7;  ///load two
-int greenLED = 8; //load three
+int loadA = 13; //load one
+int loadB = 7;  ///load two
+int loadC = 8; //load three
 int state = 0;
 int flag = 0; 
  
@@ -8,9 +8,9 @@ void setup() {
  pinMode(13, OUTPUT);
  pinMode(8, OUTPUT);
  pinMode(7,OUTPUT);
- digitalWrite(pinOUT, LOW);
- digitalWrite(redLED, HIGH);
- digitalWrite(greenLED, LOW);
+ digitalWrite(loadA, LOW);
+ digitalWrite(loadB, HIGH);
+ digitalWrite(loadX, LOW);
  Serial.begin(9600); // Default connection rate for my BT module
 }
  
@@ -22,9 +22,9 @@ void loop() {
  }
 
  if (state == '0') {
- digitalWrite(pinOUT, LOW);
- digitalWrite(redLED, HIGH);
- digitalWrite(greenLED, LOW);
+ digitalWrite(loadA, LOW);
+ digitalWrite(loadB, HIGH);
+ digitalWrite(loadC, LOW);
  if(flag == 0){
  Serial.println("Relay: off, Red: on");
  flag = 1;
@@ -32,9 +32,9 @@ void loop() {
  }
 
  else if (state == '1') {
- digitalWrite(pinOUT, HIGH);
- digitalWrite(greenLED, HIGH);
- digitalWrite(redLED, LOW);
+ digitalWrite(loadA, HIGH);
+ digitalWrite(loadB, HIGH);
+ digitalWrite(loadC), LOW);
  if(flag == 0){
  Serial.println("Relay: on, Green: on");
  flag = 1;
