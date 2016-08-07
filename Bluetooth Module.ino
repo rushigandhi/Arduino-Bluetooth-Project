@@ -11,7 +11,7 @@ void setup() {
  digitalWrite(loadA, LOW);
  digitalWrite(loadB, HIGH);
  digitalWrite(loadX, LOW);
- Serial.begin(9600); // Default connection rate for my BT module
+ Serial.begin(9600); // Default connection rate for my Bluetooth module
 }
  
 void loop() {
@@ -36,7 +36,7 @@ void loop() {
  digitalWrite(loadB, HIGH);
  digitalWrite(loadC), LOW);
  if(flag == 0){
- Serial.println("Relay: on, Green: on");
+ Serial.println("Secondary Device: on, Green: on");
  flag = 1;
  }
  }
